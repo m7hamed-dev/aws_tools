@@ -1,39 +1,42 @@
-//
+enum ColorsEnum { red, green, balck, white }
+
 class AwsTextStyle {
   // constractor
-  AwsTextStyle({this.sizes});
+  AwsTextStyle({this.fontSizesEnum, this.isDark});
   // properties
-  final AwsFontSize? sizes;
-  // behviors
+  final FontSizesEnum? fontSizesEnum;
+  final bool? isDark;
+  double? subtitle, title, medium, large;
+
   ///
-
-}
-
-enum FontSizeEnum { small, medium, large }
-
-class AwsFontSize {
-  //
-  AwsFontSize({this.fontSizeEnum, this.small, this.medium, this.large});
-  //
-  FontSizeEnum? fontSizeEnum;
-  //
-  final double? small, medium, large;
-
-  void setFontSize() {
-    if (small != null) {}
-    if (medium != null) {}
-    if (large != null) {}
+  double fontSize() {
+    if (subtitle != null) {
+      return 10.0;
+    }
+    if (fontSizesEnum == null) {
+      return 10.0;
+    }
+    return 8.0;
   }
 
-  // double getFontSize() {
-  //   switch (fontSizeEnum) {
-  //     case FontSizeEnum.small:
-  //       break;
-  //     case FontSizeEnum.medium:
-  //       break;
-  //     case FontSizeEnum.large:
-  //       break;
-  //   }
-  //   return 10.0;
+  void s() {}
+
+  void setSubtitle() {
+    if (subtitle != null) {}
+  }
+  // String get fontFamily => true ? 'SansOneBold' : 'SansOneBook';
+
+  // Color? _txtColor(bool isDark) {
+  //   return null;
+
+  //   // if (color != null) return color!;
+  //   // return isDark ? Colors.white : ConstantColor.primaryColor;
   // }
+}
+
+enum FontSizesEnum {
+  subtitle,
+  title,
+  medium,
+  large,
 }
