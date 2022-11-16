@@ -8,7 +8,7 @@ class Txt extends StatelessWidget {
     return Text(
       data,
       style: const TextStyle(
-        fontSize: 30.0,
+        fontSize: 32.0,
         fontWeight: FontWeight.bold,
       ),
     );
