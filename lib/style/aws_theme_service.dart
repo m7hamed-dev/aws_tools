@@ -14,5 +14,6 @@ class AwsThemeService {
     }
   }
 
+  void getSelctedTheme() {}
   void saveThemeDataValueInPrefs() {}
 }

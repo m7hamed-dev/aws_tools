@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// data type
-extension HundlerAmount on Map<dynamic, dynamic> {
+extension ConvertToInt on Map<dynamic, dynamic> {
   int convertToInt(String key) {
     return this[key] != null ? int.parse(this[key]) : 0;
   }

@@ -1,5 +1,5 @@
 class AwsAppAssets {
-  const AwsAppAssets({
+  AwsAppAssets({
     required this.errorImagePath,
     required this.emptyImagePath,
     required this.loadingImagePath,
@@ -10,4 +10,10 @@ class AwsAppAssets {
       emptyImagePath,
       loadingImagePath,
       warningImagePath;
+  //
+  String fontPath = '';
+
+  void setFontFamily(String path) {
+    fontPath = path;
+  }
 }
