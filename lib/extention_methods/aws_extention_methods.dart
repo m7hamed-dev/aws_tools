@@ -1,3 +1,4 @@
+import 'package:aws_tools/tools/dialogs/snack_bar.dart';
 import 'package:flutter/material.dart';
 
 /// data type
@@ -44,3 +45,32 @@ extension ShowDialogViaExt on BuildContext {
   // Future<void> showDialog({required DialogTypes dialogTypes}) =>
   //     CustomDialog.showDialogByType(this, dialogTypes);
 }
+
+/// snackbar
+extension ShowSnackBar on BuildContext {
+  void showSnackBar({bool? isError}) =>
+      AwsSnackBar.show(this, isError: isError);
+}
+
+/// screen types
+extension ScreenType on BuildContext {
+  Size get getSize => MediaQuery.of(this).size;
+  double get getWith => getSize.width;
+  double get getHeight => getSize.height;
+  //
+  ScreenTypes get getScreenType {
+    switch (getWith.floor()) {
+      case 110:
+        return ScreenTypes.mobile;
+      case 210:
+        return ScreenTypes.tablet;
+      case 140:
+        return ScreenTypes.windows;
+      case 160:
+        return ScreenTypes.web;
+    }
+    return ScreenTypes.web;
+  }
+}
+
+enum ScreenTypes { mobile, tablet, windows, web }

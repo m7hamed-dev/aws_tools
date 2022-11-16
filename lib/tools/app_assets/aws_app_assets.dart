@@ -1,4 +1,6 @@
-class AwsAppAssets {
+import 'package:flutter/material.dart';
+
+class AwsAppAssets extends ChangeNotifier {
   AwsAppAssets({
     required this.errorImagePath,
     required this.emptyImagePath,

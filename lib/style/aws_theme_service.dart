@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AwsThemeService {
+class AwsThemeProvider extends ChangeNotifier {
   //
   bool isDark = false;
   late ThemeData themeData;
@@ -11,7 +11,9 @@ class AwsThemeService {
       // themeData = _darkTheme();
     } else {
       // themeData.value = LightTheme();
+
     }
+    notifyListeners();
   }
 
   void getSelctedTheme() {}
